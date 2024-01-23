@@ -26,18 +26,18 @@ public class CreateProfileService {
 		switch(profileChoice)
 		{
 			case 1:
-				KidsProfile profile0 = new KidsProfile(pId,pName,"enabled",VodContentWatchList,VodContentWatchHistory);
-				return profile0;
+				Profile kidsProfile = new KidsProfile(pId,pName,"enabled",VodContentWatchList,VodContentWatchHistory);
+				return kidsProfile;
 			case 2:
 				System.out.println("Enter the password:");
 				String password = scanner.next();
-				AdultProfile profile1 = new AdultProfile(pId,pName,"enabled",VodContentWatchList,VodContentWatchHistory,password);
-				return profile1;
+				Profile adultProfile = new AdultProfile(pId,pName,"enabled",VodContentWatchList,VodContentWatchHistory,password);
+				return adultProfile;
 			case 3:
 				System.out.println("Enter the password:");
 				String password2 = scanner.next();
-				ElderProfile profile2 = new ElderProfile(pId,pName,"enabled",VodContentWatchList,VodContentWatchHistory,password2);
-				return profile2;
+				Profile elderProfile = new ElderProfile(pId,pName,"enabled",VodContentWatchList,VodContentWatchHistory,password2);
+				return elderProfile;
 			default:
 				System.out.println("Invalid");
 				break;
